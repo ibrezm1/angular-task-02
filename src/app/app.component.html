@@ -1,13 +1,2 @@
-<header class="bg-blue-600 text-white p-4 shadow-md">
-  <div class="container mx-auto flex justify-between items-center">
-    <h1 class="text-2xl font-bold">Task Management</h1>
-    <button 
-      *ngIf="authService.isLoggedIn()" 
-      (click)="logout()"
-      class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded transition duration-300 ease-in-out"
-    >
-      Logout
-    </button>
-  </div>
-</header>
+<app-navbar></app-navbar>
 <router-outlet></router-outlet>

@@ -5,11 +5,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TasksListComponent } from './tasks-list/tasks-list.component';
 import { TaskFormComponent } from './task-form/task-form.component';
-import { TaskDetailComponent } from './task-detail/task-detail.component';
 
 import { HttpClientModule } from '@angular/common/http'; // Import HttpClientModule
 import { TaskService } from './task.service';
-import { LoginComponent } from './login/login.component'; // Import your service
+import { LoginComponent } from './login/login.component';
+import { NavbarComponent } from './navbar/navbar.component'; // Import your service
 
 
 @NgModule({
@@ -17,8 +17,8 @@ import { LoginComponent } from './login/login.component'; // Import your service
     AppComponent,
     TasksListComponent,
     TaskFormComponent,
-    TaskDetailComponent,
-    LoginComponent
+    LoginComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

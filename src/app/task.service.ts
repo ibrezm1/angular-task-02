@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient,HttpParams, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { AuthService } from './auth.service';
 
@@ -14,9 +14,18 @@ export class TaskService {
 
   constructor(private http: HttpClient, private authService: AuthService) { }
 
-  getTasks(): Observable<any[]> {
+  // Method to fetch tasks with pagination and search
+  getTasks(page: number = 1, limit: number = 10, search: string = ''): Observable<any[]> {
     const headers = this.getHeaders();
-    return this.http.get<any[]>(`${this.apiUrl}?table=demo_tasks`, { headers });
+    let params = new HttpParams()
+      .set('page', page.toString())
+      .set('limit', limit.toString());
+    
+    if (search) {
+      params = params.set('search', search);
+    }
+
+    return this.http.get<any[]>(`${this.apiUrl}?table=demo_tasks`, { headers, params });
   }
 
   getTask(id: number): Observable<any> {

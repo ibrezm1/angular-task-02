@@ -1,0 +1,13 @@
+<header class="bg-primary text-white p-4 shadow">
+    <div class="container d-flex justify-content-between align-items-center">
+      <h1 class="h4 font-weight-bold">Task Management</h1>
+      <button 
+        *ngIf="authService.isLoggedIn()" 
+        (click)="logout()"
+        class="btn btn-danger font-weight-bold"
+      >
+        Logout
+      </button>
+    </div>
+  </header>
+  
