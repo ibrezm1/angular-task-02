@@ -9,7 +9,9 @@ import { TaskFormComponent } from './task-form/task-form.component';
 import { HttpClientModule } from '@angular/common/http'; // Import HttpClientModule
 import { TaskService } from './task.service';
 import { LoginComponent } from './login/login.component';
-import { NavbarComponent } from './navbar/navbar.component'; // Import your service
+import { NavbarComponent } from './navbar/navbar.component';
+import { FooterComponent } from './footer/footer.component';
+import { MainLayoutComponent } from './main-layout/main-layout.component'; // Import your service
 
 
 @NgModule({
@@ -18,7 +20,9 @@ import { NavbarComponent } from './navbar/navbar.component'; // Import your serv
     TasksListComponent,
     TaskFormComponent,
     LoginComponent,
-    NavbarComponent
+    NavbarComponent,
+    FooterComponent,
+    MainLayoutComponent
   ],
   imports: [
     BrowserModule,
